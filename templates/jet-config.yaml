@@ -9,5 +9,4 @@ data:
     GITHUB_REPO: {{ .Values.app.repo }}
     FLASK_ENV: {{ .Values.app.env }}
     FLASK_APP: run.py
-    FLASK_DATABASE_URI: {{ .Values.app.db }}
     APP_PORT: "{{ .Values.app.port }}"
