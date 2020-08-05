@@ -6,6 +6,7 @@ replicaCount: 1
 
 webserver:
   image: ~
+  branch: master
   tag: ~
   pullPolicy: Always
   replicas: 1
