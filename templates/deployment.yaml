@@ -31,11 +31,19 @@ spec:
             - name: webserver
               containerPort: 80
               protocol: TCP
+          volumeMounts:
+            - mountPath: "/secrets/deploy-key"
+              name: deploy-key
+              readOnly: true
           envFrom:
             - secretRef:
                 name: jetployment-secrets
             - configMapRef:
                 name: "{{template "application.name" .}}-env"
+      volumes:
+        - name: deploy-key
+          secret:
+            secretName: deploy-key
 {{- if .Values.webserver.resources }}
           resources:
 {{ toYaml .Values.webserver.resources | indent 12 }}
