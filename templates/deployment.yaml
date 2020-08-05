@@ -34,7 +34,6 @@ spec:
           volumeMounts:
             - mountPath: "/secrets/deploy-key"
               name: deploy-key
-              readOnly: true
           envFrom:
             - secretRef:
                 name: {{ .Values.app.secrets.jetploymentSecrets }}
@@ -44,6 +43,7 @@ spec:
         - name: deploy-key
           secret:
             secretName: {{ .Values.app.secrets.deployKey }}
+            defaultMode: 256
 {{- if .Values.webserver.resources }}
           resources:
 {{ toYaml .Values.webserver.resources | indent 12 }}
