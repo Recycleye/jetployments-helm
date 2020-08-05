@@ -37,13 +37,13 @@ spec:
               readOnly: true
           envFrom:
             - secretRef:
-                name: jetployment-secrets
+                name: {{ .Values.app.secerets.jetploymentSecrets }}
             - configMapRef:
                 name: "{{template "application.name" .}}-env"
       volumes:
         - name: deploy-key
           secret:
-            secretName: deploy-key
+            secretName: {{ .Values.app.secrets.deployKey }}
 {{- if .Values.webserver.resources }}
           resources:
 {{ toYaml .Values.webserver.resources | indent 12 }}

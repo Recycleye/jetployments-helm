@@ -20,6 +20,9 @@ app:
   env: development
   registry: ~
   deployKeyPath: /secrets/deploy-key
+  secrets:
+    deployKey: deploy-key
+    jetploymentSecrets: jetployment-secrets
 
 ingress:
   webserver:
