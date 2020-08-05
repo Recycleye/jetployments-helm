@@ -31,6 +31,10 @@ spec:
             - name: webserver
               containerPort: 80
               protocol: TCP
+          volumeMounts:
+            - mountPath: "/secrets/deploy-key"
+              name: deploy-key
+              readOnly: true
           envFrom:
             - secretRef:
                 name: jetployment-secrets
