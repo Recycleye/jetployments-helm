@@ -10,3 +10,4 @@ data:
     FLASK_ENV: {{ .Values.app.env }}
     FLASK_APP: run.py
     APP_PORT: "{{ .Values.app.port }}"
+    DEPLOY_KEY_PATH: {{ .Values.app.deployKeyPath }}
