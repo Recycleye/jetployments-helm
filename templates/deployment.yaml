@@ -37,7 +37,7 @@ spec:
               readOnly: true
           envFrom:
             - secretRef:
-                name: {{ .Values.app.secerets.jetploymentSecrets }}
+                name: {{ .Values.app.secrets.jetploymentSecrets }}
             - configMapRef:
                 name: "{{template "application.name" .}}-env"
       volumes:
