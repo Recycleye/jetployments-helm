@@ -17,7 +17,7 @@ spec:
   template:
     metadata:
       annotations:
-        checksum/annotator-configmap: {{include (print $.Template.BasePath "/service.yaml") . | sha256sum}}
+        checksum/jetployments-configmap: {{include (print $.Template.BasePath "/jet-config.yaml") . | sha256sum}}
       labels:
         app: {{template "application.name" .}}
         component: webserver
