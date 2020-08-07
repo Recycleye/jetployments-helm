@@ -12,3 +12,4 @@ data:
     FLASK_APP: run.py
     APP_PORT: "{{ .Values.app.port }}"
     DEPLOY_KEY_PATH: {{ .Values.app.deployKeyPath }}
+    REPO_CLONE_PATH: {{ .Values.app.repoClonePath }}

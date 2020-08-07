@@ -20,6 +20,7 @@ app:
   env: development
   registry: ~
   deployKeyPath: /secrets/deploy-key
+  repoClonePath: /repo
   secrets:
     deployKey: deploy-key
     jetploymentSecrets: jetployment-secrets
