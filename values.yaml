@@ -16,7 +16,8 @@ webserver:
 app:
   port: 80
   repo: ~
-  db: ~
+  branch: master
+  authMethod: ~
   env: development
   registry: ~
   deployKeyPath: /secrets/deploy-key
