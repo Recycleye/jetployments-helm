@@ -14,3 +14,4 @@ data:
     DEPLOY_KEY_PATH: {{ .Values.app.deployKeyPath }}
     REPO_CLONE_PATH: {{ .Values.app.repoClonePath }}
     APP_AUTH: {{ .Values.app.authMethod }}
+    MAIN_COLOUR: {{ .Values.app.mainColour }}

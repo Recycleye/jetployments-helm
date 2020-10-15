@@ -22,6 +22,7 @@ app:
   registry: ~
   deployKeyPath: /secrets/deploy-key
   repoClonePath: /repo
+  mainColour: #83a835
   secrets:
     deployKey: deploy-key
     jetploymentSecrets: jetployment-secrets
